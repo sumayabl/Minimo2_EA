@@ -20,6 +20,11 @@ export class ConfigurationPage implements OnInit {
   }
 
   myChange(){
+    console.log(this.notification);
+    console.log(this.private);
+    console.log(this.authentication);
+  }
+  accept(){
     /*console.log(this.notification);
     console.log(this.private);
     console.log(this.authentication);*/
