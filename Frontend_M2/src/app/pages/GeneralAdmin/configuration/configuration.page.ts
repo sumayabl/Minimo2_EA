@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfigurationPage implements OnInit {
 
+  public notification:boolean = true;
+  public private:boolean = true;
+  public authentication:boolean = true;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  myChange(){
+    console.log(this.notification);
+    console.log(this.private);
+    console.log(this.authentication);
   }
 
 }
