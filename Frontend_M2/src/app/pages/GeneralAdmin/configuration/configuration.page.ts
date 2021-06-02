@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminService } from '../../../services/admin.service';
+import { Router } from '@angular/router';
+import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-configuration',
@@ -11,15 +14,22 @@ export class ConfigurationPage implements OnInit {
   public private:boolean = true;
   public authentication:boolean = true;
 
-  constructor() { }
+  constructor(private adminService: AdminService, private router: Router) { }
 
   ngOnInit() {
   }
 
   myChange(){
-    console.log(this.notification);
+    /*console.log(this.notification);
     console.log(this.private);
-    console.log(this.authentication);
+    console.log(this.authentication);*/
+
+    let configuration = {'notification': this.notification, 'private': this.private, 'authentication': this.authentication}
+
+    console.log (configuration);
+
+    this.adminService.updateConfiguration(configuration)
+            .pipe(first())
   }
 
 }
