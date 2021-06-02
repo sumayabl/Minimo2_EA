@@ -24,7 +24,7 @@ export class ConfigurationPage implements OnInit {
     console.log(this.private);
     console.log(this.authentication);
   }
-  accept(){
+  save(){
     /*console.log(this.notification);
     console.log(this.private);
     console.log(this.authentication);*/
