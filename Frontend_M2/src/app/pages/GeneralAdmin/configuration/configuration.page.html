@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile configuration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Notification</ion-label>
+      <ion-toggle [(ngModel)]="notification" [checked]="notification" color="danger"></ion-toggle>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Enable private account</ion-label>
+      <ion-toggle [(ngModel)]="private" [checked]="private" color="danger"></ion-toggle>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Two-step authentication</ion-label>
+      <ion-toggle [(ngModel)]="authentication" [checked]="authentication" color="danger"></ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>

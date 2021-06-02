@@ -106,7 +106,11 @@ const routes: Routes = [
   {
     path: 'tarea',
     loadChildren: () => import('./pages/GeneralUser/tarea/tarea.module').then( m => m.TareaPageModule)
+  },  {
+    path: 'configuration',
+    loadChildren: () => import('./pages/GeneralAdmin/configuration/configuration.module').then( m => m.ConfigurationPageModule)
   },
+
 
 
 ];
