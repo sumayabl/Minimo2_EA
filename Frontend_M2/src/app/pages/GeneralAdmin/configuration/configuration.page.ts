@@ -28,8 +28,8 @@ export class ConfigurationPage implements OnInit {
 
     console.log (configuration);
 
-    this.adminService.updateConfiguration(configuration)
-            .pipe(first())
+    /*this.adminService.updateConfiguration(configuration);*/
+    this.adminService.updateConfiguration(configuration).subscribe(() => { this.router.navigateByUrl('/admin-desk');});
   }
 
 }

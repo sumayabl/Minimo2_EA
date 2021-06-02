@@ -2,27 +2,23 @@ import mongoose, { Schema, Document} from 'mongoose';
 
 //Modelo de objeto que se guarda en la BBDD de MongoDB
 const ConfigurationSchema = new Schema({
-    name: {
-        type: String
+    notification: {
+        type: Boolean
     },
-    email: {
-        type: String
+    private: {
+        type: Boolean
     },
-    cif: {
-        type: String
+    authentication: {
+        type: Boolean
     },
 });
 
 //Interfaz para tratar respuesta como documento
-export interface IAdmin extends Document {
-    name: string;
-    email: string;
-    cif: string;
-    address: string;
-    postalCode: string;
-    phone: string;
-    password: string;
+export interface IConfiguration extends Document {
+    notification: boolean;
+    private: boolean;
+    authentication: boolean;
 }
 
 //Exportamos modelo para poder usarlo
-export default mongoose.model<IAdmin>('admin', ConfigurationSchema);
+export default mongoose.model<IConfiguration>('configuration', ConfigurationSchema);
